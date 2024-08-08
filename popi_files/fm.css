@@ -1,0 +1,81 @@
+
+body{ margin: 0; padding: 0; }
+
+.ucplayer { background:#FFF; position: relative; height: 90px; overflow: hidden; display:table; width:100%; max-width:4000px; }
+.ucplayer1 { display:table-cell; width:33%; position:relative; }
+.ucplayer2 { display:table-cell; width:33%; }
+.ucplayer3 { display:table-cell; width:33%; text-align:right;}
+
+.musica-body{ background:#FFF; position: relative; max-height: 90px; overflow: hidden; }
+.box-controls{ position: relative; width:147px; margin:4px auto;}
+.musica-play{ margin: auto; text-align: center; width:60px; height: 60px; color:#000; padding: 10px; border-radius: 100%; }
+.musica-play i{ margin:8px 15px; display: block; font-size: 2.7em; color:#FFF; }
+.musica-play:after{ width:140px; height:140px; border:1px solid #999; content: ''; top:-30px; left:3px; border-radius: 100px; position: absolute; }
+.musica-play.animar:after,.musica-play.animar:before{  -webkit-animation-name: animar; /* Safari 4.0 - 8.0 */ -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */ animation-name: animar; animation-duration: 4s; animation-iteration-count: infinite; }
+.ondas{ display: none; width:200px; height:200px; border:1px solid #d5d5d5; content: ''; top:-60px; left:-30px; border-radius: 100%; position: absolute; }
+.ondas2{ display: none; width:250px; height:250px; border:1px solid #777; content: ''; top:-85px; left:-55px; border-radius: 100%; position: absolute; }
+.ondas2:after{ width:280px; height:280px; border:1px solid #333; content: ''; top:-16px; left:-16px; border-radius: 100%; position: absolute;  }
+.ondas2:before{ width:340px; height:340px; border:1px solid #000; content: ''; top:-47px; left:-47px; border-radius: 100%; position: absolute; }
+.ondas2.animar:after,.ondas2.animar:before,.ondas2.animar,.ondas.animar{  display: block; -webkit-animation-name: animar; /* Safari 4.0 - 8.0 */ -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */ animation-name: animar; animation-duration: 4s; animation-iteration-count: infinite; }
+@keyframes animar{ 0%{ transform: scale(1)} 50%{ transform: scale(1.3)} 50%{ transform: scale(1.5)} 75%{ transform: scale(1.8),opacity:0.5} 100%{ transform: scale(2); opacity: 0.1;} }
+.musica-play:before{ width:160px; height:160px; border:1px solid #999; content: ''; top:-40px; left:-8px; border-radius: 100px; position: absolute; }
+.musica-vol1{ position: absolute; top:50%; margin-top:-18px; background:#000; padding: 10px; border-radius: 100%; width:15px; height: 15px; color:#FFF; text-align: center; }
+.musica-pause{ position: absolute; top:50%; right: 0; margin-top:-18px; background:#000; padding: 10px; border-radius: 100%; width:15px;  height: 15px; color:#FFF; text-align: center; }
+.musica-vol1:hover body >.musica-vol2{ display: block; }
+.musica-vol2{ position: absolute; display: none; bottom:0; left:0; }
+.slider-handle{ border-radius: 100%; }
+.slider { width: 140px !important; }
+.slider-track{ border:1px solid #ccc; }
+#GC >.tooltip { position: absolute;  bottom:20px; z-index: 10; color:#8716b8; }
+.slider-selection { background: #8716b8; }
+.shareds{ position: absolute; right:0; top:0; bottom: 0; }
+.shareds ul{ padding: 10px; margin: 10px 0; text-align: center; display: table-cell; height: 50px; overflow: hidden; }
+.shareds li{ width:50px; border-radius: 100%; position: relative; display: inline-block; padding: 10px; height: 50px; /*     transform: skew(-15deg)   */ }
+.shareds li:hover{ border-radius: 100%; -webkit-filter: blur(2px); /* Safari */ filter: blur(3px) brightness(200%); }
+.shareds li a{ color:#FFF; bottom: 0; position: relative; display: inline-block; padding: 9px 0px; /*     transform: skew(15deg)   */ }
+.shareds li i{ width: 50px; }
+.instagram{ background:#8716b8; background-image:-linear-gradient(to bottom,#b81639,#8716b8);  background-image:-webkit-linear-gradient(to bottom,#b81639,#8716b8); background-image:-moz-linear-gradient(to right bottom,#b81639,#8716b8); background-image:-o-linear-gradient(to bottom,#b81639,#8716b8); }
+.twitter{ background:#3193cc; }
+.whatsapp{ background:#009652; }
+.facebook{ background:#004196; }
+.capa-radio{ border:1px solid #ddd; display: block; height: 80px; width:100px; float: left; background-size:cover !important; margin: 4px 10px;    border-radius: 4px; }
+.musica-musica-atual { background: #000; color:#FFF; font-size: 16px ; font-family: arial,sans-serif; text-transform: uppercase; padding: 5px 15px; max-width: 600px; border-radius: 10px; width:90%; position: absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1000; }
+.musica-musica-atual label { font-weight: bold; overflow: hidden; float: left; display: inline-block; }
+.musica-musica-atual span { font-weight: bold; overflow: hidden; float: left; margin-left:10px; max-width:350px; display: inline-block; }
+.cover{ position: absolute; width:140px; top:0; z-index: 1; right:310px;  height: 90px; background-size: contain !important; background-repeat: no-repeat !important; }
+
+@media (max-width:1260px){
+    .twitter{ display: none !important; }
+    .shareds li{ position: relative; display: inline-block; padding: 10px;  height: 70px; transform: skew(-15deg) }
+    .shareds li a{ color:#FFF; bottom: 0; position: relative; display: inline-block; padding:10px 0; transform: skew(15deg) }
+    .cover-musica { right:220px; width:90px; background-size: cover!important; }
+}
+
+@media (max-width:960px){
+    .twitter{ display: none !important; }
+    .shareds li{ position: relative; display: inline-block; padding: 10px; height: 70px; transform: skew(-15deg) }
+    .shareds li a{ color:#FFF; bottom: 0; position: relative; display: inline-block; padding:10px 0; transform: skew(15deg) }
+    .cover-musica { right:220px; width:90px; background-size: cover!important; }
+    .musica-musica-atual { max-width: 300px; overflow: hidden; }
+    .musica-musica-atual span { font-weight: bold; overflow: hidden; margin-left:10px; }
+}
+
+@media (max-width:768px){
+    .twitter{ display: none !important; }
+    .shareds li{ position: relative; display: inline-block; padding: 10px;  height: 70px; transform: skew(-15deg) }
+    .shareds li a{ color:#FFF; bottom: 0; position: relative; display: inline-block; padding:10px 0; transform: skew(15deg) }
+    .cover-musica { right:150px; width:90px; background-size: cover!important; }
+    .capa-radio { width:80px; }
+    .twitter{ display: none !important; }
+    .instagram{ display: none !important;}
+}
+
+@media (max-width:548px){   
+    .cover-musica { display: none; }
+    .musica-musica-atual { display: none; }
+    .capa-radio { width:80px; }  
+}
+
+@media (max-width:430px){    
+    .shareds { display: none; }
+}

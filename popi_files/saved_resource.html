@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0073)https://player.painelvox.com/toporesponsivo2/8522/1/1638c0/e62d52/060e7f/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Web Radio</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"> 
+        <meta content="Ouvindo a Web Radio" name="Description">
+        <meta content="Web Radio,Ouça a melhor rádio, web rádio" name="keywords">
+        <meta itemprop="name" content="Web Radio"> 
+        <meta itemprop="description" content="Clique para ouvir"> 
+        <meta itemprop="url" content="http://www.seusite.com"> 
+        <link href="./all.min.css" rel="stylesheet" type="text/css">    
+        <link href="./slider.css" rel="stylesheet" type="text/css"> 
+        <link href="./fm.css" rel="stylesheet" type="text/css">
+        <script src="./jquery.js.download" type="text/javascript"></script>
+		<script src="./bootstrap-slider.js.download" type="text/javascript"></script> 
+        <script src="./fm.js.download"></script>
+    <script>
+	function load_musica_atual(){$(function(){$.ajax({url:"/musica-atual/8088",type:"GET",success:function(o){o?($("#status").html('Online <div class="light"></div>'),$("#musica").html('<marquee width="100%" direction="left">Tocando agora: '+o+"</marquee>")):($("#status").text("Offline"),$("#musica").html(""))}})})}setInterval(load_musica_atual,6e4),load_musica_atual();
+	</script>
+	</head> 
+
+    <body class="mobo">
+	
+	 <div class="player" data-porta="8088" data-api="" data-autoplay="1" data-volume="8" data-url="http://princesamax.ddns.net:1036/stream"></div>
+	 
+		<div class="ucplayer" style="background:#060e7f;border-bottom:4px solid #1638c0">
+		<div class="ucplayer1">
+		                <div class="musica-musica-atual" style="background:#1638c0;color:#e62d52">
+				<span><div id="musica"></div></span>
+                </div>
+            		</div>
+		<div class="ucplayer2">
+		<div class="box-controls">
+                <div class="ondas animar"></div>
+                <div class="ondas2 animar"></div>
+                <div class="musica-play animar on" style="background:#1638c0"><i class="fa fa-play fa-4x" style="color:#e62d52"></i></div>
+                <div class="musica-pause" style="background:#1638c0"><i class="fa fa-pause" style="color:#e62d52"></i></div>
+                <div class="musica-vol1" style="background:#1638c0" data-tipo="menos"><i class="fa fa-volume-up" style="color:#e62d52"></i></div>
+                <div class="musica-vol2" data-tipo="mais">     
+                    <div class="slider slider-horizontal" id="GC"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 50%;"></div><div class="slider-track-high" style="right: 0px; width: 50%;"></div></div><div class="tooltip tooltip-main top in" role="presentation" style="left: 50%;"><div class="tooltip-arrow"></div><div class="tooltip-inner">5</div></div><div class="tooltip tooltip-min top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max top" role="presentation" style="display: none;"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div><div class="slider-handle min-slider-handle custom" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5" tabindex="0" style="left: 50%;"></div><div class="slider-handle max-slider-handle custom hide" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" tabindex="0" style="left: 0%;"></div></div><input type="slider" class="span2" value="5" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5" data-slider-id="GC" id="volume" data-slider-tooltip="true" data-slider-handle="custom" data-value="5" style="display: none;">
+                </div>                
+            </div> 
+		</div>
+		<div class="ucplayer3">
+		<div class="btn-infor shareds  ">                
+                <ul class="btn-footer">
+                                    </ul> 
+            </div>
+		</div>
+		</div>
+    
+</body></html>
